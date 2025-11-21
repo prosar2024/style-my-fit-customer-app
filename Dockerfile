@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:1.28-alpine3.21 AS runner
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
