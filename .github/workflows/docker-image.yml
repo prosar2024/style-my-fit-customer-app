@@ -1,0 +1,33 @@
+name: Build and Run Docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-run:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cleanup Containers
+        run: |
+            CONTAINER_NAME=style-my-fit-fe-customer
+            docker ps -q -f name="^${CONTAINER_NAME}$" | xargs -r docker kill
+            docker ps -aq -f name="^${CONTAINER_NAME}$" | xargs -r docker rm
+
+      - name: Build Docker image
+        run: docker build -t style-my-fit-fe-customer .
+
+      - name: Run Docker container
+        run: docker run -d --name style-my-fit-fe-customer --network stylemyfit style-my-fit-fe-customer
+
+      - name: Check if container is running
+        run: |
+          if docker ps -f name=style-my-fit-fe-customer --format '{{.Names}}'; then
+            echo "Container is running."
+          else
+            echo "Container is not running." >&2
+            exit 1
+          fi
