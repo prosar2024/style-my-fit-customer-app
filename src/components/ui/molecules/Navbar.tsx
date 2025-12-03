@@ -1,71 +1,214 @@
 "use client";
-import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import { SearchIcon, WishlistIcon } from '@/components/icons/icons';
-import LoginModal from '@/components/ui/molecules/LoginModal';
-import { menuItems } from '@/data/menuItems';
 
-interface DesktopHeaderProps {
-  wishlistCount?: number;
-}
+import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
-const Navbar = ({ wishlistCount = 0 }: DesktopHeaderProps) => {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
+import { X } from "lucide-react";
+import { SearchIcon, WishlistIcon } from "@/components/icons/icons";
+import { menuItems, mobileMenuItems } from "@/data/menuItems";
+import LoginModal from "./LoginModal";
 
-  const handleCloseLoginModal = () => {
-    setIsLoginModalOpen(false);
-  };
 
+function DesktopNav({
+  pathname,
+  router,
+  wishlistCount,
+  onLoginClick,
+}: {
+  pathname: string;
+  router: any;
+  wishlistCount: number;
+  onLoginClick: () => void;
+}) {
   return (
-    <>
-      <div className="bg-[#222222] box-border content-stretch flex flex-col gap-[4px] items-center px-0 py-[26px] relative w-full">
-        <div className="relative shrink-0 w-full">
-          <div className="flex flex-row items-center size-full">
-            <div className="box-border content-stretch flex items-center justify-between px-[174px] py-0 relative w-full">
-              <button
-                onClick={() => { window.location.href = '/'; }}
-                className="h-[35px] relative shrink-0 w-[150px] hover:scale-105 transition-transform cursor-pointer"
-                data-name="Group 58 1"
-                aria-label="Go to homepage"
-              >
-                <img alt="StyleMyFit Logo" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={"/icons/logo.svg"} />
-              </button>
-              <div className="content-stretch hidden lg:flex font-['Poppins:Regular',sans-serif] gap-[46px] items-center justify-center leading-[40px] not-italic relative shrink-0 text-[14px] text-nowrap text-white whitespace-pre">
-                {menuItems.map((item) => {
-                  const isActive = pathname === item.path;
-                  return (
-                    <button
-                      key={item.path}
-                      onClick={() => router.push(item.path)}
-                      className={`relative shrink-0 transition-colors cursor-pointer ${isActive ? "text-[#b2833a]" : "hover:text-[#b2833a]"
-                        }`}
-                    >
-                      {item.label}
-                    </button>
-                  );
-                })}
-              </div>
-              <div className="content-stretch flex gap-[17px] items-center justify-center relative shrink-0 w-[192px]">
-                <SearchIcon onClick={() => {}} />
-                <WishlistIcon onClick={() => {}} wishlistCount={wishlistCount} />
-                <div className="content-stretch flex gap-[12px] items-center justify-center relative shrink-0 w-[69px]">
-                  <button
-                    onClick={() => {setIsLoginModalOpen(true)}}
-                    className="box-border content-stretch flex gap-[10px] h-[39px] items-center justify-center p-[10px] relative shrink-0 w-[96px] hover:bg-[#b2833a] hover:text-white rounded-[30px] transition-all cursor-pointer group"
-                  >
-                    <p className="font-['Poppins:Regular',sans-serif] leading-[40px] not-italic relative shrink-0 text-[#b2833a] text-[14px] text-nowrap whitespace-pre group-hover:text-white">Login</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="hidden lg:flex items-center justify-between px-[174px] w-full">
+      {/* LOGO */}
+      <button
+        onClick={() => router.push("/")}
+        className="relative h-[35px] w-[150px] hover:scale-105 transition-transform"
+      >
+        <img
+          src="/icons/logo.svg"
+          alt="StyleMyFit Logo"
+          className="absolute inset-0 size-full object-contain"
+        />
+      </button>
+
+      {/* MENU */}
+      <nav className="flex gap-[46px] text-white text-[14px]">
+        {menuItems.map((item) => (
+          <button
+            key={item.path}
+            onClick={() => router.push(item.path)}
+            className={`transition-colors ${pathname === item.path
+                ? "text-[#b2833a]"
+                : "hover:text-[#b2833a]"
+              }`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </nav>
+
+      {/* RIGHT ICONS */}
+      <div className="flex items-center gap-[17px]">
+        <SearchIcon onClick={() => router.push("/search")} />
+        <WishlistIcon
+          onClick={() => router.push("/wishlist")}
+          wishlistCount={wishlistCount}
+        />
+        <button
+          onClick={onLoginClick}
+          className="px-4 py-2 border border-[#b2833a] text-[#b2833a] rounded-[30px] hover:bg-[#b2833a] hover:text-white transition-all"
+        >
+          Login
+        </button>
       </div>
-      <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
-    </>
+    </div>
   );
 }
 
-export default Navbar;
+/* ----------------------------------------------
+   MOBILE NAV
+----------------------------------------------- */
+
+function MobileNav({
+  pathname,
+  router,
+  menuOpen,
+  setMenuOpen,
+  wishlistCount,
+  onLoginClick,
+}: {
+  pathname: string;
+  router: any;
+  menuOpen: boolean;
+  setMenuOpen: (v: boolean) => void;
+  wishlistCount: number;
+  onLoginClick: () => void;
+}) {
+  return (
+    <header className="lg:hidden fixed top-0 left-0 right-0 bg-[#222222] z-50">
+      {/* TOP BAR */}
+      <div className="flex items-center justify-between px-5 py-3">
+        {/* MENU BUTTON */}
+        <motion.button
+          onClick={() => setMenuOpen(!menuOpen)}
+          whileTap={{ scale: 0.9 }}
+        >
+          {menuOpen ? (
+            <X className="text-white" size={28} />
+          ) : (
+            <div className="space-y-2">
+              <div className="h-[4px] w-[30px] bg-white rounded" />
+              <div className="h-[4px] w-[30px] bg-white rounded" />
+              <div className="h-[4px] w-[30px] bg-white rounded" />
+            </div>
+          )}
+        </motion.button>
+
+        {/* LOGO */}
+        <button onClick={() => router.push("/")}>
+          <img src="/icons/logo.svg" className="h-[35px]" />
+        </button>
+
+        {/* SEARCH */}
+        <button onClick={() => router.push("/search")}>
+          <SearchIcon />
+        </button>
+      </div>
+
+      {/* DROPDOWN MENU */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="bg-[#222222] border-t border-[#333]"
+          >
+            <nav className="flex flex-col px-5 py-2 text-white">
+              {mobileMenuItems.map((item) => (
+                <motion.button
+                  key={item.path}
+                  whileTap={{ scale: 0.96 }}
+                  onClick={() => {
+                    router.push(item.path);
+                    setMenuOpen(false);
+                  }}
+                  className={`py-3 text-left ${pathname === item.path
+                      ? "text-[#b2833a]"
+                      : "hover:text-[#d38436]"
+                    }`}
+                >
+                  <div className="flex items-center justify-between">
+                    {item.label}
+
+                    {item.showBadge && wishlistCount > 0 && (
+                      <span className="w-6 h-6 bg-[#b2833a] text-white rounded-full flex items-center justify-center text-xs">
+                        {wishlistCount}
+                      </span>
+                    )}
+                  </div>
+                </motion.button>
+              ))}
+
+              {/* LOGIN */}
+              <button
+                onClick={onLoginClick}
+                className="py-3 text-left hover:text-[#d38436]"
+              >
+                Login
+              </button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* spacer */}
+      <div className="h-[59px]" />
+    </header>
+  );
+}
+
+/* ----------------------------------------------
+   MAIN HEADER COMPONENT
+----------------------------------------------- */
+
+export default function Header({ wishlistCount = 0 }: { wishlistCount?: number }) {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  return (
+    <>
+      <div className="bg-[#222222] py-[26px]">
+        {/* DESKTOP */}
+        <DesktopNav
+          pathname={pathname}
+          router={router}
+          wishlistCount={wishlistCount}
+          onLoginClick={() => setIsLoginModalOpen(true)}
+        />
+
+        {/* MOBILE */}
+        <MobileNav
+          pathname={pathname}
+          router={router}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+          wishlistCount={wishlistCount}
+          onLoginClick={() => setIsLoginModalOpen(true)}
+        />
+      </div>
+
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+      />
+    </>
+  );
+}
