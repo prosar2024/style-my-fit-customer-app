@@ -115,7 +115,7 @@ export default function AnimatedSearchBox({
               onClick={(e) => e.stopPropagation()}
             >
               <p className="text-[14px] text-[#999] text-center py-8">
-                No results found for "{searchQuery}"
+                No results found for &quot;{searchQuery}&quot;
               </p>
             </motion.div>
           )}

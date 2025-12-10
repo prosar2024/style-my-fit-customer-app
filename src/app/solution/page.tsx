@@ -477,7 +477,7 @@ export default function SolutionPage({
                 Ready to Find Your Perfect Fit?
               </h2>
               <p className="text-white/90 font-['Poppins:Regular',sans-serif] text-[16px] sm:text-[18px] leading-relaxed mb-8">
-                Experience the future of online shopping with StyleMyFit's personalized recommendations.
+                Experience the future of online shopping with StyleMyFit&apos;s personalized recommendations.
               </p>
               <motion.button
                 onClick={onShopClick}

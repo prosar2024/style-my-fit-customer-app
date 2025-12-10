@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrandCard } from "@/components/ui/atoms/BrandCard";
+import Image from "next/image";
 
 interface BrandCardData {
     id: string;
@@ -66,10 +67,11 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                         {/* Frame45 */}
                         {mobileFirst && (
                             <div className="relative h-[490px] min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
-                                <img
+                                <Image
                                     src={mobileFirst.imageSrc}
                                     alt={mobileFirst.name}
                                     className="absolute inset-0 w-full h-full object-cover"
+                                    fill
                                 />
                                 <div className="absolute top-0 right-0 p-[10px]">
                                     <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
@@ -84,9 +86,10 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                         {/* Frame46 */}
                         {mobileSecond && (
                             <div className="relative h-[490px] min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
-                                <img
+                                <Image
                                     src={mobileSecond.imageSrc}
                                     alt={mobileSecond.name}
+                                    fill
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
                                 <div className="absolute top-0 right-0 p-[10px]">
@@ -104,10 +107,11 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                     {/* Frame48 — small tall card */}
                     {mobileTall && (
                         <div className="relative h-[452px] w-full max-w-[655px] rounded-[10px] overflow-hidden">
-                            <img
+                            <Image
                                 src={mobileTall.imageSrc}
                                 alt={mobileTall.name}
                                 className="absolute inset-0 w-full h-full object-cover"
+                                fill
                             />
                             <div className="absolute top-0 right-0 p-[10px]">
                                 <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
@@ -154,10 +158,11 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
 
                             {rightTallBrand && (
                                 <div className="relative h-[828px] w-full min-w-[410px] rounded-[10px] overflow-hidden">
-                                    <img
+                                    <Image
                                         src={rightTallBrand.imageSrc}
                                         alt={rightTallBrand.name}
                                         className="absolute inset-0 h-full w-full object-cover"
+                                        fill
                                     />
 
                                     <div className="absolute top-0 left-0 p-[10px]">

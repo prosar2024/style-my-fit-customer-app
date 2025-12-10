@@ -281,7 +281,7 @@ export default function BodyShapeGuide({
                                 <Quote className="absolute -top-8 -left-4 text-[#b2833a]/20" size={80} />
                                 <div className="relative z-10">
                                     <p className="font-['Playfair_Display:500',serif] text-[#1A1A1A] text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-8 italic">
-                                        "This guide completely transformed how I shop. For the first time, I understand what works for my body and why. I feel confident, empowered, and absolutely beautiful in my clothes."
+                                        &quot;This guide completely transformed how I shop. For the first time, I understand what works for my body and why. I feel confident, empowered, and absolutely beautiful in my clothes.&quot;
                                     </p>
                                     <div className="border-l-4 border-[#b2833a] pl-6">
                                         <p className="font-poppins font-semibold text-[#1A1A1A] text-lg mb-1">

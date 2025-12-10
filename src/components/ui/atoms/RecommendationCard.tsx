@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface RecommendationCardProps {
     imageSrc: string;
@@ -24,8 +25,9 @@ function RecommendationCard({
 
             {/* Frame61 Image */}
             <div className="h-[247px] w-full rounded-[10px] shrink-0 relative overflow-hidden">
-                <img
+                <Image
                     src={imageSrc}
+                    fill
                     alt=""
                     className="w-full h-full object-cover rounded-[10px]"
                 />

@@ -1,9 +1,9 @@
 "use client";
+import React from "react";
 import { OurBrands } from "@/components/ui/home/OurBrand";
 import RecommendationsGrid from "@/components/ui/home/RecommendationsStack";
 import HeroSection from "@/components/ui/molecules/HeroSection";
 import { ImageCarousel } from "@/components/ui/molecules/ImageCarousal";
-import React, { useState } from "react";
 
 const Index = () => {
 

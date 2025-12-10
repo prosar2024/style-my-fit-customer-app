@@ -15,7 +15,7 @@ export type ClothingItem = {
   id: string;
   name: string;
   type: ClothingType;
-  imageUrl: string;
+  imageUrl: string | any;
   description: string;
   price: number;
   bodyTypes: BodyType[];

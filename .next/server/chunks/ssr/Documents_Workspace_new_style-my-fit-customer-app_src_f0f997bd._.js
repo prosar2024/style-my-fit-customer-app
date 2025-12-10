@@ -8,6 +8,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Workspace/new/style-my-fit-customer-app/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Workspace/new/style-my-fit-customer-app/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+"use client";
 ;
 ;
 const ERROR_IMG_SRC = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
@@ -29,17 +30,17 @@ function ImageWithFallback(props) {
                 "data-original-url": src
             }, void 0, false, {
                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/components/ui/atoms/ImageWithFallback.tsx",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/components/ui/atoms/ImageWithFallback.tsx",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/components/ui/atoms/ImageWithFallback.tsx",
-        lineNumber: 16,
+        lineNumber: 17,
         columnNumber: 5
     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
         src: src,
@@ -50,7 +51,7 @@ function ImageWithFallback(props) {
         onError: handleError
     }, void 0, false, {
         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/components/ui/atoms/ImageWithFallback.tsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -238,23 +239,9 @@ const categories = [
         count: 32
     }
 ];
-function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClick, onContactClick, onSolutionClick, onBodyShapeGuideClick, wishlistCount }) {
+function BlogPage({ onGoHome, onShopClick, onWishlistClick, onAboutClick, onContactClick, onSolutionClick, onBodyShapeGuideClick }) {
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [isSubscribed, setIsSubscribed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [showSearchOverlay, setShowSearchOverlay] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [selectedPost, setSelectedPost] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const handleSubscribe = (e)=>{
-        e.preventDefault();
-        if (email) {
-            setIsSubscribed(true);
-            setTimeout(()=>{
-                setEmail('');
-                setIsSubscribed(false);
-            }, 3000);
-        }
-    };
     const openPostModal = (post)=>{
         setSelectedPost(post);
         document.body.style.overflow = 'hidden';
@@ -262,34 +249,6 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
     const closePostModal = ()=>{
         setSelectedPost(null);
         document.body.style.overflow = '';
-    };
-    const handleMenuNavigate = (page)=>{
-        setIsMenuOpen(false);
-        switch(page){
-            case 'home':
-                onGoHome?.();
-                break;
-            case 'shop':
-                onShopClick?.();
-                break;
-            case 'wishlist':
-                onWishlistClick?.();
-                break;
-            case 'contact':
-                onContactClick?.();
-                break;
-            case 'about':
-                onAboutClick?.();
-                break;
-            case 'blog':
-                break;
-            case 'solution':
-                onSolutionClick?.();
-                break;
-            case 'body-shape-guide':
-                onBodyShapeGuideClick?.();
-                break;
-        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
         initial: {
@@ -329,12 +288,12 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 249,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                lineNumber: 248,
+                                lineNumber: 202,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -390,17 +349,17 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                     children: "Blog"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                    lineNumber: 279,
+                                                    lineNumber: 233,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 273,
+                                                lineNumber: 227,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 268,
+                                            lineNumber: 222,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -420,7 +379,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                             children: "The latest news, articles, and resources on fashion, body positivity, and finding your perfect fit."
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 302,
+                                            lineNumber: 256,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -445,7 +404,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 319,
+                                                        lineNumber: 273,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -456,29 +415,29 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                         className: "w-full pl-12 pr-4 py-4 rounded-[16px] bg-white text-[#222222] placeholder:text-[#999999] font-['Poppins:Regular',sans-serif] text-[15px] focus:outline-none focus:ring-2 focus:ring-[#b2833a] transition-all"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 320,
+                                                        lineNumber: 274,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 318,
+                                                lineNumber: 272,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 312,
+                                            lineNumber: 266,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 266,
+                                    lineNumber: 220,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                lineNumber: 265,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -492,23 +451,23 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                         fill: "#ffffff"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                        lineNumber: 335,
+                                        lineNumber: 289,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 334,
+                                    lineNumber: 288,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                lineNumber: 333,
+                                lineNumber: 287,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                        lineNumber: 246,
+                        lineNumber: 200,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -551,7 +510,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 358,
+                                                                lineNumber: 312,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$src$2f$components$2f$ui$2f$atoms$2f$ImageWithFallback$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ImageWithFallback"], {
@@ -560,7 +519,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 px-[-32px] py-[0px]"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 364,
+                                                                lineNumber: 318,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -585,25 +544,25 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 378,
+                                                                            lineNumber: 332,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         "Featured"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 377,
+                                                                    lineNumber: 331,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 371,
+                                                                lineNumber: 325,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 357,
+                                                        lineNumber: 311,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -619,14 +578,14 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                 size: 12
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                lineNumber: 389,
+                                                                                lineNumber: 343,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             blogPosts[0].category
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 388,
+                                                                        lineNumber: 342,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -636,20 +595,20 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                 size: 13
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                lineNumber: 393,
+                                                                                lineNumber: 347,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             blogPosts[0].date
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 392,
+                                                                        lineNumber: 346,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 387,
+                                                                lineNumber: 341,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -657,7 +616,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 children: blogPosts[0].title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 398,
+                                                                lineNumber: 352,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -665,7 +624,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 children: blogPosts[0].excerpt
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 402,
+                                                                lineNumber: 356,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,7 +635,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                         children: blogPosts[0].readTime
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 407,
+                                                                        lineNumber: 361,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -708,41 +667,41 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                     className: "group-hover/btn:text-[#D38436] transition-colors"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                    lineNumber: 422,
+                                                                                    lineNumber: 376,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                lineNumber: 418,
+                                                                                lineNumber: 372,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 411,
+                                                                        lineNumber: 365,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 406,
+                                                                lineNumber: 360,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 385,
+                                                        lineNumber: 339,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 355,
+                                                lineNumber: 309,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 349,
+                                            lineNumber: 303,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -778,7 +737,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 442,
+                                                                    lineNumber: 396,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$src$2f$components$2f$ui$2f$atoms$2f$ImageWithFallback$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ImageWithFallback"], {
@@ -787,7 +746,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                     className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 448,
+                                                                    lineNumber: 402,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -799,25 +758,25 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                 size: 11
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                lineNumber: 457,
+                                                                                lineNumber: 411,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             post.category
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 456,
+                                                                        lineNumber: 410,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 455,
+                                                                    lineNumber: 409,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                            lineNumber: 441,
+                                                            lineNumber: 395,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -830,14 +789,14 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                             size: 12
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 467,
+                                                                            lineNumber: 421,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         post.date
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 466,
+                                                                    lineNumber: 420,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -845,7 +804,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                     children: post.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 471,
+                                                                    lineNumber: 425,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -853,7 +812,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                     children: post.excerpt
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 475,
+                                                                    lineNumber: 429,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,7 +823,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                             children: post.readTime
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 480,
+                                                                            lineNumber: 434,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -879,42 +838,42 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                     size: 14
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                    lineNumber: 490,
+                                                                                    lineNumber: 444,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 484,
+                                                                            lineNumber: 438,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 479,
+                                                                    lineNumber: 433,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                            lineNumber: 464,
+                                                            lineNumber: 418,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, post.id, true, {
                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                    lineNumber: 433,
+                                                    lineNumber: 387,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 431,
+                                            lineNumber: 385,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 347,
+                                    lineNumber: 301,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -945,14 +904,14 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 className: "text-[#b2833a]"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 510,
+                                                                lineNumber: 464,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "Popular Posts"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 509,
+                                                        lineNumber: 463,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -974,7 +933,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                             children: index + 1
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 523,
+                                                                            lineNumber: 477,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -985,7 +944,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                     children: post.title
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                    lineNumber: 527,
+                                                                                    lineNumber: 481,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -996,35 +955,35 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                                    lineNumber: 530,
+                                                                                    lineNumber: 484,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                            lineNumber: 526,
+                                                                            lineNumber: 480,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                    lineNumber: 522,
+                                                                    lineNumber: 476,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, index, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 516,
+                                                                lineNumber: 470,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 514,
+                                                        lineNumber: 468,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 503,
+                                                lineNumber: 457,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1050,14 +1009,14 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                 className: "text-[#b2833a]"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 548,
+                                                                lineNumber: 502,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "Categories"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 547,
+                                                        lineNumber: 501,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1076,7 +1035,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                         children: category.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 560,
+                                                                        lineNumber: 514,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1084,52 +1043,52 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                                         children: category.count
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                        lineNumber: 563,
+                                                                        lineNumber: 517,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, index, true, {
                                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                                lineNumber: 554,
+                                                                lineNumber: 508,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 552,
+                                                        lineNumber: 506,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 541,
+                                                lineNumber: 495,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                        lineNumber: 501,
+                                        lineNumber: 455,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 500,
+                                    lineNumber: 454,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                            lineNumber: 345,
+                            lineNumber: 299,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                        lineNumber: 344,
+                        lineNumber: 298,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                lineNumber: 244,
+                lineNumber: 198,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -1162,7 +1121,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                             }
                         }, void 0, false, {
                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                            lineNumber: 588,
+                            lineNumber: 542,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1203,12 +1162,12 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                         className: "text-[#222222]"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                        lineNumber: 611,
+                                        lineNumber: 565,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 605,
+                                    lineNumber: 559,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1218,7 +1177,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                             className: "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 616,
+                                            lineNumber: 570,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$src$2f$components$2f$ui$2f$atoms$2f$ImageWithFallback$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ImageWithFallback"], {
@@ -1227,7 +1186,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                             className: "w-full h-full object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 617,
+                                            lineNumber: 571,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1240,14 +1199,14 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                             size: 12
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                            lineNumber: 626,
+                                                            lineNumber: 580,
                                                             columnNumber: 21
                                                         }, this),
                                                         selectedPost.category
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                    lineNumber: 625,
+                                                    lineNumber: 579,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1257,26 +1216,26 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                             size: 12
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                            lineNumber: 630,
+                                                            lineNumber: 584,
                                                             columnNumber: 21
                                                         }, this),
                                                         selectedPost.date
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                    lineNumber: 629,
+                                                    lineNumber: 583,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                            lineNumber: 624,
+                                            lineNumber: 578,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 615,
+                                    lineNumber: 569,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1292,7 +1251,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                         children: selectedPost.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 641,
+                                                        lineNumber: 595,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1301,18 +1260,18 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                             children: selectedPost.readTime
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                            lineNumber: 645,
+                                                            lineNumber: 599,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                        lineNumber: 644,
+                                                        lineNumber: 598,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 640,
+                                                lineNumber: 594,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1320,7 +1279,7 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                 children: selectedPost.excerpt
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 650,
+                                                lineNumber: 604,
                                                 columnNumber: 19
                                             }, this),
                                             selectedPost.fullContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Workspace$2f$new$2f$style$2d$my$2d$fit$2d$customer$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1330,41 +1289,41 @@ function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClic
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                                lineNumber: 656,
+                                                lineNumber: 610,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                        lineNumber: 638,
+                                        lineNumber: 592,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                                    lineNumber: 637,
+                                    lineNumber: 591,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                            lineNumber: 596,
+                            lineNumber: 550,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                    lineNumber: 579,
+                    lineNumber: 533,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-                lineNumber: 577,
+                lineNumber: 531,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Workspace/new/style-my-fit-customer-app/src/app/blog/page.tsx",
-        lineNumber: 227,
+        lineNumber: 181,
         columnNumber: 5
     }, this);
 }

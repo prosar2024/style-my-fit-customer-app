@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface BrandCardProps {
     name: string;
@@ -12,9 +13,10 @@ export const BrandCard: React.FC<BrandCardProps> = ({
     badgeClassName,
 }) => (
     <div className="relative h-[490px] min-w-[200px] flex-1">
-        <img
+        <Image
             src={imageSrc}
             alt={name}
+            fill
             className="absolute inset-0 h-full w-full object-cover pointer-events-none"
         />
         <div className="relative h-full w-full overflow-hidden rounded-[10px] flex justify-end items-start p-[10px]">

@@ -8,6 +8,7 @@ import { menuItems } from "@/data/menuItems";
 import LoginModal from "@/components/ui/molecules/LoginModal";
 import AnimatedSearchBox from "@/components/ui/atoms/AnimatedSearchBox";
 import MobileMenu from "@/components/ui/molecules/MobileMenu";
+import Image from "next/image";
 
 function DesktopNav({
   pathname,
@@ -28,8 +29,9 @@ function DesktopNav({
         onClick={() => router.push("/")}
         className="relative h-[35px] w-[150px] hover:scale-105 transition-transform"
       >
-        <img
+        <Image
           src="/icons/logo.svg"
+          fill
           alt="StyleMyFit Logo"
           className="absolute inset-0 size-full object-contain"
         />
@@ -102,14 +104,10 @@ function MobileNav({
         </motion.button>
 
         <button onClick={() => router.push("/")}>
-          <img src="/icons/logo.svg" className="h-[35px]" />
+          <Image fill alt="StyleMyFit Logo" src="/icons/logo.svg" className="h-[35px]" />
         </button>
-
-        <button onClick={() => setShowSearchOverlay(true)}>
-          <SearchIcon />
-        </button>
+        <SearchIcon onClick={() => setShowSearchOverlay(true)} />
       </div>
-
       <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} setShowLoginModal={onLoginClick} onNavigate={(path) => router.push(path)} />
     </header>
   );

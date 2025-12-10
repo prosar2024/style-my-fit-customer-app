@@ -2,7 +2,7 @@
 // import image_0adf8eb1507afe77eade045630101c74461742c0 from 'figma:asset/0adf8eb1507afe77eade045630101c74461742c0.png';
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Search, Calendar, Tag, ArrowRight, TrendingUp, Mail, Check, Menu, X, Heart, ShoppingBag, Home, Phone, Info, BookOpen } from 'lucide-react';
+import { Search, Calendar, Tag, ArrowRight, TrendingUp, X } from 'lucide-react';
 import { AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from '@/components/ui/atoms/ImageWithFallback';
 
@@ -163,24 +163,9 @@ const categories = [
   { name: 'Fashion Trends', count: 32 },
 ];
 
-export default function BlogPage({ onClose, onGoHome, onShopClick, onWishlistClick, onAboutClick, onContactClick, onSolutionClick, onBodyShapeGuideClick, wishlistCount }: BlogPageProps) {
+export default function BlogPage({ onGoHome, onShopClick, onWishlistClick, onAboutClick, onContactClick, onSolutionClick, onBodyShapeGuideClick }: BlogPageProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showSearchOverlay, setShowSearchOverlay] = useState(false);
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setTimeout(() => {
-        setEmail('');
-        setIsSubscribed(false);
-      }, 3000);
-    }
-  };
 
   const openPostModal = (post: BlogPost) => {
     setSelectedPost(post);
@@ -190,37 +175,6 @@ export default function BlogPage({ onClose, onGoHome, onShopClick, onWishlistCli
   const closePostModal = () => {
     setSelectedPost(null);
     document.body.style.overflow = '';
-  };
-
-  const handleMenuNavigate = (page: string) => {
-    setIsMenuOpen(false);
-    
-    switch (page) {
-      case 'home':
-        onGoHome?.();
-        break;
-      case 'shop':
-        onShopClick?.();
-        break;
-      case 'wishlist':
-        onWishlistClick?.();
-        break;
-      case 'contact':
-        onContactClick?.();
-        break;
-      case 'about':
-        onAboutClick?.();
-        break;
-      case 'blog':
-        // Already on this page, just close menu
-        break;
-      case 'solution':
-        onSolutionClick?.();
-        break;
-      case 'body-shape-guide':
-        onBodyShapeGuideClick?.();
-        break;
-    }
   };
 
   return (

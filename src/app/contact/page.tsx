@@ -89,7 +89,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           onClick={(e) => e.stopPropagation()}
         >
           <p className="text-[14px] text-[#999999] font-['Poppins:Regular',sans-serif] text-center py-8">
-            No results found for "{searchQuery}"
+            No results found for &quot;{searchQuery}&quot;
           </p>
         </motion.div>
       )}
@@ -145,7 +145,7 @@ function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               </h3>
               
               <p className="text-gray-600 mb-6 font-['Poppins:Regular',sans-serif]">
-                Thank you for reaching out. We've received your message and will get back to you within 24 hours.
+                Thank you for reaching out. We&apos;ve received your message and will get back to you within 24 hours.
               </p>
               
               <motion.button
@@ -177,15 +177,6 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ 
-  onClose, 
-  onGoHome, 
-  onShopClick, 
-  onWishlistClick,
-  onAboutClick,
-  onBlogClick,
-  onSolutionClick,
-  onBodyShapeGuideClick,
-  wishlistCount = 0 
 }: ContactPageProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showSearchOverlay, setShowSearchOverlay] = useState(false);
@@ -197,37 +188,6 @@ export default function ContactPage({
     message: ''
   });
   const [focusedField, setFocusedField] = useState<string | null>(null);
-
-  const handleMenuNavigate = (page: string) => {
-    setMenuOpen(false);
-    
-    switch (page) {
-      case 'home':
-        onGoHome?.();
-        break;
-      case 'shop':
-        onShopClick?.();
-        break;
-      case 'wishlist':
-        onWishlistClick?.();
-        break;
-      case 'contact':
-        // Already on this page, just close menu
-        break;
-      case 'about':
-        onAboutClick?.();
-        break;
-      case 'blog':
-        onBlogClick?.();
-        break;
-      case 'solution':
-        onSolutionClick?.();
-        break;
-      case 'body-shape-guide':
-        onBodyShapeGuideClick?.();
-        break;
-    }
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -291,7 +251,7 @@ export default function ContactPage({
                 Contact Us
               </h1>
               <p className="text-gray-600 max-w-2xl mx-auto font-['Poppins:Regular',sans-serif] text-lg md:text-xl">
-                Have questions about StyleMyFit? We'd love to hear from you.
+                Have questions about StyleMyFit? We&apos;d love to hear from you.
               </p>
             </motion.div>
           </div>
@@ -314,7 +274,7 @@ export default function ContactPage({
                   Send us a message
                 </h2>
                 <p className="text-gray-600 mb-8 font-['Poppins:Regular',sans-serif]">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">

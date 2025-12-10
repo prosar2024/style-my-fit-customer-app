@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IconFacebook, IconInstagram, IconTwitter, SocialIcon } from "@/components/icons/icons";
 
