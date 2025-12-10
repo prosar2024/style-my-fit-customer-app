@@ -1,8 +1,0 @@
-{
-  "/about/page": "app/about/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/body-shape-guide/page": "app/body-shape-guide/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/solution/page": "app/solution/page.js"
-}
