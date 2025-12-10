@@ -66,7 +66,7 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 // Validate ../../src/app/contact/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/contact">> = Specific
-  const handler = {} as typeof import("../../src/app/body-shape-guide/page.jsx
+  const handler = {} as typeof import("../../src/app/contact/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

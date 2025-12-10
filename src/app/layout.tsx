@@ -1,23 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import Navbar from "@/components/ui/molecules/Navbar";
 import ScrollToTop from "@/components/ui/atoms/scollToTop";
-import "./globals.css";
 import Footer from "@/components/ui/molecules/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import LoaderWrapper from "@/hoc/LoaderWrapper";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fit My Style",
+  title: "StyleMyFit - Find Your Perfect Fit",
+  description:
+    "StyleMyFit helps you discover clothing that fits your unique body shape perfectly. Say goodbye to ill-fitting clothes and hello to confidence with our personalized fashion recommendations.",
 };
 
 export default function RootLayout({
@@ -27,16 +18,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased font-poppins`}
       >
         <ScrollToTop />
-        <div className="min-h-screen">
-          <Navbar />
-          <div className="h-2 bg-gradient-to-r from-brand-100 to-brand-200"></div>
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <LoaderWrapper>
+          <div className="min-h-screen">
+            <Navbar />
+            <main className="lg:pt-[94px] pt-[65.5px]">{children}</main>
+            <Footer />
+          </div>
+        </LoaderWrapper>
       </body>
     </html>
   );

@@ -32,10 +32,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#222222] w-full text-white">
       <div className="px-4 md:px-[90px] py-[80px] flex flex-col gap-8">
-        {/* Top Sections */}
         <div className="flex flex-wrap gap-8 md:gap-[32px] w-full">
-          
-          {/* About Section */}
           <FooterSection
             title={
               <>
@@ -43,12 +40,11 @@ const Footer = () => {
               </>
             }
           >
-            <p className="text-sm text-[#99a1af] leading-5">
+            <p className="text-sm text-[#99a1af] leading-5 max-w-[320px]">
               Personalized fashion recommendations based on your unique body shape.
             </p>
           </FooterSection>
 
-          {/* Customer Service */}
           <FooterSection title="Customer Service">
             <FooterList
               items={[
@@ -61,7 +57,6 @@ const Footer = () => {
             />
           </FooterSection>
 
-          {/* Quick Links */}
           <FooterSection title="Quick Links">
             <FooterList
               items={[
@@ -73,7 +68,6 @@ const Footer = () => {
             />
           </FooterSection>
 
-          {/* Follow Us */}
           <FooterSection title="Follow Us">
             <div className="flex gap-4">
               <SocialIcon icon={IconFacebook} />
@@ -84,7 +78,6 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Footer */}
         <div className="flex flex-wrap justify-between items-center gap-4 w-full pt-4">
           <p className="text-sm text-[#99a1af]">© 2025 BelleMode. All rights reserved.</p>
 

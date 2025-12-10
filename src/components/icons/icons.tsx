@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 
-function WishlistIcon({ onClick, wishlistCount = 0 }: { onClick?: () => void; wishlistCount?: number }) {
+function WishlistIcon({ onClick, wishlistCount = 0, pathname }: { onClick?: () => void; wishlistCount?: number; pathname?: string }) {
     return (
         <button
             onClick={onClick}
@@ -9,14 +9,14 @@ function WishlistIcon({ onClick, wishlistCount = 0 }: { onClick?: () => void; wi
         >
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 32">
                 <g>
-                    <path d="M18.08 21.8638L18 21.9401L17.912 21.8638C14.112 18.5755 11.6 16.4011 11.6 14.1962C11.6 12.6703 12.8 11.5259 14.4 11.5259C15.632 11.5259 16.832 12.2888 17.256 13.3264H18.744C19.168 12.2888 20.368 11.5259 21.6 11.5259C23.2 11.5259 24.4 12.6703 24.4 14.1962C24.4 16.4011 21.888 18.5755 18.08 21.8638ZM21.6 10C20.208 10 18.872 10.618 18 11.5869C17.128 10.618 15.792 10 14.4 10C11.936 10 10 11.8387 10 14.1962C10 17.0725 12.72 19.43 16.84 22.9929L18 24L19.16 22.9929C23.28 19.43 26 17.0725 26 14.1962C26 11.8387 24.064 10 21.6 10Z" fill="white" className="group-hover:fill-[#b2833a] transition-colors" />
+                    <path d="M18.08 21.8638L18 21.9401L17.912 21.8638C14.112 18.5755 11.6 16.4011 11.6 14.1962C11.6 12.6703 12.8 11.5259 14.4 11.5259C15.632 11.5259 16.832 12.2888 17.256 13.3264H18.744C19.168 12.2888 20.368 11.5259 21.6 11.5259C23.2 11.5259 24.4 12.6703 24.4 14.1962C24.4 16.4011 21.888 18.5755 18.08 21.8638ZM21.6 10C20.208 10 18.872 10.618 18 11.5869C17.128 10.618 15.792 10 14.4 10C11.936 10 10 11.8387 10 14.1962C10 17.0725 12.72 19.43 16.84 22.9929L18 24L19.16 22.9929C23.28 19.43 26 17.0725 26 14.1962C26 11.8387 24.064 10 21.6 10Z" fill={pathname === '/wishlist' ? '#b2833a' : 'white'} className="group-hover:fill-[#b2833a] transition-colors" />
                 </g>
             </svg>
             {wishlistCount > 0 && (
                 <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="absolute -top-1 -right-1 bg-[#b2833a] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-['Poppins:Medium',sans-serif]"
+                    className="absolute -top-1 -right-1 bg-[#b2833a] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-poppins font-medium"
                 >
                     {wishlistCount}
                 </motion.div>
@@ -73,4 +73,33 @@ function IconTwitter() {
     );
 }
 
-export { WishlistIcon, SearchIcon, SocialIcon, IconFacebook, IconInstagram, IconTwitter };
+function GoogleIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18.1713 8.36788H17.5001V8.33329H10.0001V11.6666H14.7096C14.0225 13.6069 12.1763 15 10.0001 15C7.23884 15 5.00008 12.7612 5.00008 9.99996C5.00008 7.23871 7.23884 4.99996 10.0001 4.99996C11.2746 4.99996 12.4343 5.48079 13.3171 6.26621L15.6742 3.90913C14.1859 2.52204 12.1951 1.66663 10.0001 1.66663C5.39801 1.66663 1.66675 5.39788 1.66675 9.99996C1.66675 14.602 5.39801 18.3333 10.0001 18.3333C14.6022 18.3333 18.3334 14.602 18.3334 9.99996C18.3334 9.44121 18.2759 8.89579 18.1713 8.36788Z"
+        fill="#FFC107"
+      />
+      <path
+        d="M2.62744 6.12121L5.36536 8.12913C6.10619 6.29496 7.90036 4.99996 9.99994 4.99996C11.2745 4.99996 12.4341 5.48079 13.3169 6.26621L15.6741 3.90913C14.1857 2.52204 12.1949 1.66663 9.99994 1.66663C6.79911 1.66663 4.02327 3.47371 2.62744 6.12121Z"
+        fill="#FF3D00"
+      />
+      <path
+        d="M9.99994 18.3333C12.1524 18.3333 14.1082 17.5095 15.5878 16.1712L13.0078 13.9875C12.1432 14.6468 11.0865 15.0008 9.99994 15C7.83286 15 5.99119 13.6179 5.29911 11.6891L2.58203 13.783C3.96036 16.4816 6.76119 18.3333 9.99994 18.3333Z"
+        fill="#4CAF50"
+      />
+      <path
+        d="M18.1713 8.36796H17.5V8.33337H10V11.6667H14.7096C14.3809 12.5902 13.7889 13.3972 13.0067 13.9879L13.0079 13.9871L15.5879 16.1708C15.4046 16.3363 18.3333 14.1667 18.3333 10C18.3333 9.44129 18.2758 8.89587 18.1713 8.36796Z"
+        fill="#1976D2"
+      />
+    </svg>
+  );
+}
+
+export { WishlistIcon, SearchIcon, SocialIcon, IconFacebook, IconInstagram, IconTwitter, GoogleIcon };
