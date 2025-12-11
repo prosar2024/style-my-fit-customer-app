@@ -148,7 +148,7 @@ export default function FilterSidebar({
                             transition={{ type: 'spring', bounce: 0 }}
                             className="lg:hidden fixed left-0 top-0 bottom-0 w-[min(280px,90vw)] bg-white z-[100] p-6 overflow-y-auto shadow-2xl"
                         >
-                            <div className="flex items-center justify-between mb-6 pb-4 border-b">
+                            <div className="flex items-center justify-between mt-[65px] mb-6 pb-4 border-b">
                                 <h2 className="font-semibold text-gray-900 text-lg">Filters</h2>
                                 <button onClick={onShowFiltersToggle} className="p-1 hover:bg-gray-100 rounded-lg">
                                     <X size={20} className="text-gray-600" />

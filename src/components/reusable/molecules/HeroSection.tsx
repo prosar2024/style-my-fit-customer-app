@@ -21,7 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="hidden lg:block w-full h-[732px]">
                 <BannerCarousel className="h-full w-full" images={carouselImages}>
                     <div className="flex h-full w-full items-center justify-start pl-[482px] pr-[193px]">
-                        <div className="flex flex-col gap-[22px] max-w-[600px] min-w-[350px]">
+                        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-[22px] max-w-[600px] min-w-[350px]">
                             <h1
                                 className="font-['Playfair_Display'] text-[60px] leading-[70px]"
                                 style={{

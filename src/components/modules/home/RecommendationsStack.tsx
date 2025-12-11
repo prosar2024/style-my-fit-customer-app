@@ -2,9 +2,9 @@ import RecommendationCard from '@/components/reusable/atoms/RecommendationCard';
 
  function RecommendationsGrid() {
   return (
-    <div className="min-w-[650px] w-full relative shrink-0">
+    <div className="md:min-w-[650px] w-full relative shrink-0">
       <div className="flex items-center justify-center w-full h-full">
-        <div className="flex flex-wrap gap-[23px] items-center justify-center px-[90px] py-[100px] w-full box-border">
+        <div className="flex flex-wrap gap-[23px] items-center justify-center px-[10px] py-[50px] md:px-[90px] md:py-[100px] w-full box-border">
           <RecommendationCard 
             imageSrc={"/images/home/recommendation1.png"}
             title="Precise Recommendations"

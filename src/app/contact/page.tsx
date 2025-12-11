@@ -59,7 +59,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           placeholder="Search your item here..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 bg-transparent font-['Poppins:Regular',sans-serif] leading-[40px] text-[14px] text-[#222222] outline-none placeholder:text-[#acacac]"
+          className="flex-1 bg-transparent font-poppins leading-[40px] text-[14px] text-[#222222] outline-none placeholder:text-[#acacac]"
           autoFocus
         />
         {searchQuery && (
@@ -88,7 +88,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           className="absolute top-[calc(50%+35px)] bg-white rounded-[16px] shadow-[0_20px_40px_-12px_rgba(0,0,0,0.2)] w-[90vw] max-w-[600px] max-h-[400px] overflow-y-auto p-4"
           onClick={(e) => e.stopPropagation()}
         >
-          <p className="text-[14px] text-[#999999] font-['Poppins:Regular',sans-serif] text-center py-8">
+          <p className="text-[14px] text-[#999999] font-poppins text-center py-8">
             No results found for &quot;{searchQuery}&quot;
           </p>
         </motion.div>
@@ -144,7 +144,7 @@ function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 Message Sent!
               </h3>
               
-              <p className="text-gray-600 mb-6 font-['Poppins:Regular',sans-serif]">
+              <p className="text-gray-600 mb-6 font-poppins">
                 Thank you for reaching out. We&apos;ve received your message and will get back to you within 24 hours.
               </p>
               
@@ -152,7 +152,7 @@ function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 onClick={onClose}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-[#b2833a] to-[#D38436] text-white rounded-full shadow-lg hover:shadow-xl transition-all font-['Poppins:Medium',sans-serif]"
+                className="px-8 py-3 bg-gradient-to-r from-[#b2833a] to-[#D38436] text-white rounded-full shadow-lg hover:shadow-xl transition-all font-poppins font-medium"
               >
                 Got it
               </motion.button>
@@ -250,7 +250,7 @@ export default function ContactPage({
               >
                 Contact Us
               </h1>
-              <p className="text-gray-600 max-w-2xl mx-auto font-['Poppins:Regular',sans-serif] text-lg md:text-xl">
+              <p className="text-gray-600 max-w-2xl mx-auto font-poppins text-lg md:text-xl">
                 Have questions about StyleMyFit? We&apos;d love to hear from you.
               </p>
             </motion.div>
@@ -273,16 +273,16 @@ export default function ContactPage({
                 >
                   Send us a message
                 </h2>
-                <p className="text-gray-600 mb-8 font-['Poppins:Regular',sans-serif]">
+                <p className="text-gray-600 mb-8 font-poppins">
                   Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div className="relative">
-                    <label 
-                      htmlFor="name" 
-                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-['Poppins:Regular',sans-serif] ${
+                    <label
+                      htmlFor="name"
+                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-poppins ${
                         focusedField === 'name' || formData.name
                           ? '-top-6 text-sm text-[#b2833a]'
                           : 'top-3 text-gray-500'
@@ -299,15 +299,15 @@ export default function ContactPage({
                       onFocus={() => setFocusedField('name')}
                       onBlur={() => setFocusedField(null)}
                       required
-                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors font-['Poppins:Regular',sans-serif] text-[#222222]"
+                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors font-poppins text-[#222222]"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div className="relative">
-                    <label 
-                      htmlFor="email" 
-                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-['Poppins:Regular',sans-serif] ${
+                    <label
+                      htmlFor="email"
+                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-poppins ${
                         focusedField === 'email' || formData.email
                           ? '-top-6 text-sm text-[#b2833a]'
                           : 'top-3 text-gray-500'
@@ -324,15 +324,15 @@ export default function ContactPage({
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
                       required
-                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors font-['Poppins:Regular',sans-serif] text-[#222222]"
+                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors font-poppins text-[#222222]"
                     />
                   </div>
 
                   {/* Message Field */}
                   <div className="relative">
-                    <label 
-                      htmlFor="message" 
-                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-['Poppins:Regular',sans-serif] ${
+                    <label
+                      htmlFor="message"
+                      className={`absolute left-0 transition-all duration-200 pointer-events-none font-poppins ${
                         focusedField === 'message' || formData.message
                           ? '-top-6 text-sm text-[#b2833a]'
                           : 'top-3 text-gray-500'
@@ -349,7 +349,7 @@ export default function ContactPage({
                       onBlur={() => setFocusedField(null)}
                       required
                       rows={5}
-                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors resize-none font-['Poppins:Regular',sans-serif] text-[#222222]"
+                      className="w-full pb-3 pt-3 bg-transparent border-b-2 border-gray-200 focus:border-[#b2833a] outline-none transition-colors resize-none font-poppins text-[#222222]"
                     />
                   </div>
 
@@ -358,7 +358,7 @@ export default function ContactPage({
                     type="submit"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-[#b2833a] to-[#D38436] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-2xl transition-all font-['Poppins:Medium',sans-serif] text-lg flex items-center justify-center gap-3 group relative overflow-hidden"
+                    className="w-full bg-gradient-to-r from-[#b2833a] to-[#D38436] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-2xl transition-all font-poppins font-medium text-lg flex items-center justify-center gap-3 group relative overflow-hidden"
                   >
                     <motion.div
                       animate={{ x: ['-100%', '100%'] }}
@@ -407,13 +407,13 @@ export default function ContactPage({
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-[#222222] mb-2 font-['Poppins:SemiBold',sans-serif] text-lg">
+                        <h3 className="text-[#222222] mb-2 font-poppins font-semibold text-lg">
                           {info.title}
                         </h3>
                         {info.details.map((detail, idx) => (
-                          <p 
-                            key={idx} 
-                            className="text-gray-600 font-['Poppins:Regular',sans-serif] text-sm leading-relaxed"
+                          <p
+                            key={idx}
+                            className="text-gray-600 font-poppins text-sm leading-relaxed"
                           >
                             {detail}
                           </p>
@@ -431,11 +431,11 @@ export default function ContactPage({
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="bg-gradient-to-br from-[#b2833a]/10 via-[#D38436]/10 to-transparent rounded-2xl p-6 border-2 border-[#b2833a]/20"
               >
-                <h3 className="text-[#222222] mb-3 font-['Poppins:SemiBold',sans-serif] text-lg">
+                <h3 className="text-[#222222] mb-3 font-poppins font-semibold text-lg">
                   Quick Response
                 </h3>
-                <p className="text-gray-600 font-['Poppins:Regular',sans-serif] text-sm leading-relaxed">
-                  We typically respond to all inquiries within 24 hours during business days. 
+                <p className="text-gray-600 font-poppins text-sm leading-relaxed">
+                  We typically respond to all inquiries within 24 hours during business days.
                   For urgent matters, please call us directly during business hours.
                 </p>
               </motion.div>
@@ -454,7 +454,7 @@ export default function ContactPage({
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-[#b2833a] mx-auto mb-4" />
-                <p className="text-gray-600 font-['Poppins:Regular',sans-serif]">
+                <p className="text-gray-600 font-poppins">
                   Interactive map placeholder
                 </p>
               </div>

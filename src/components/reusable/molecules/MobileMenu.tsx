@@ -56,7 +56,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, setShowLoginMo
                             className="fixed top-0 left-0 bottom-0 w-[85%] max-w-[320px] bg-[#222222] z-[1000] shadow-[4px_0_20px_rgba(0,0,0,0.3)]"
                         >
                             <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-                                <h2 className="font-['Playfair_Display:600',serif] text-white text-[24px]">Menu</h2>
+                                <h2 className="font-poppins font-medium text-white text-[24px]">Menu</h2>
                                 <button
                                     onClick={onClose}
                                     className="p-2 text-white hover:text-[#b2833a] transition-colors"
@@ -66,7 +66,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, setShowLoginMo
                                 </button>
                             </div>
 
-                            <nav className="px-4 py-6">
+                            <nav className="px-4 py-6 overflow-y-auto max-h-[calc(100vh-175px)]">
                                 <ul className="space-y-2">
                                     {mobileMenuItems.map((item, index) => (
                                         <motion.li
@@ -92,7 +92,7 @@ export default function MobileMenu({ isOpen, onClose, onNavigate, setShowLoginMo
                                 </ul>
                             </nav>
 
-                            <div className="absolute bottom-0 left-0 right-0 px-6 py-6 border-t border-white/10">
+                            <div className="absolute bg-[#222222] bottom-0 left-0 right-0 px-6 py-6 border-t border-white/10">
                                 <button
                                     className="w-full py-3 px-4 text-[#b2833a] font-poppins font-medium text-[16px] border border-[#b2833a] rounded-full hover:bg-[#b2833a]/10 transition-colors"
                                     onClick={() => setShowLoginModal(true)}

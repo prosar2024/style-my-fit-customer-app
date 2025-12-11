@@ -1,7 +1,7 @@
 import React from "react";
-import { BrandCard } from "@/components/reusable/atoms/BrandCard";
 import Image from "next/image";
-
+import { BrandCard } from "@/components/reusable/atoms/BrandCard";
+import { motion } from "motion/react";
 interface BrandCardData {
     id: string;
     name: string;
@@ -12,7 +12,6 @@ interface OurBrandsProps {
     title?: string;
     brands: BrandCardData[];
     primaryBrandIds?: string[];
-    rightTallBrandId?: string;
     onSeeAll?: () => void;
     seeAllLabel?: string;
 }
@@ -21,24 +20,16 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
     title = "Our Brands",
     brands,
     primaryBrandIds = [],
-    rightTallBrandId,
     onSeeAll,
     seeAllLabel = "See All Brands",
 }) => {
 
-    /* -----------------------------------------------------------
-       DESKTOP BRAND MAPPING
-    ------------------------------------------------------------*/
-    const [first, second, smallTall] = primaryBrandIds;
+    const [first, second, smallTall, rightTall] = primaryBrandIds;
 
     const firstBrand = brands.find(b => b.id === first);
     const secondBrand = brands.find(b => b.id === second);
     const smallTallBrand = brands.find(b => b.id === smallTall);
-    const rightTallBrand = brands.find(b => b.id === first);
-
-    /* -----------------------------------------------------------
-       MOBILE VIEW — EXACT FROM Mobile.tsx (NO CHANGES)
-    ------------------------------------------------------------*/
+    const rightTallBrand = brands.find(b => b.id === rightTall);
 
     // Mobile view uses the first 3 brands in order
     const mobileFirst = brands[0];
@@ -47,26 +38,20 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
 
     return (
         <section className="w-full bg-white">
-
-            {/* -----------------------------------------------------
-               MOBILE (<lg) — EXACT Mobile.tsx OUTPUT
-            ------------------------------------------------------ */}
             <div className="block lg:hidden px-4 sm:px-6 py-12 sm:py-16">
-
-                {/* Frame55 */}
-                <h2 className="font-poppins text-[34px] text-[#222] text-center mb-10">
+                <motion.h2
+                    className="font-poppins text-[34px] text-[#222] text-center mb-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                    viewport={{ once: true }}
+                >
                     {title}
-                </h2>
-
-                {/* Frame54 container */}
+                </motion.h2>
                 <div className="flex flex-col gap-[13px] items-center">
-
-                    {/* Frame52: first two cards */}
                     <div className="flex flex-row w-full gap-[13px] justify-center">
-
-                        {/* Frame45 */}
                         {mobileFirst && (
-                            <div className="relative h-[490px] min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
+                            <div className="relative h-[490px] min-w-unset xs:min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
                                 <Image
                                     src={mobileFirst.imageSrc}
                                     alt={mobileFirst.name}
@@ -85,7 +70,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
 
                         {/* Frame46 */}
                         {mobileSecond && (
-                            <div className="relative h-[490px] min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
+                            <div className="relative h-[490px] min-w-unset xs:min-w-[200px] flex-1 rounded-[10px] overflow-hidden">
                                 <Image
                                     src={mobileSecond.imageSrc}
                                     alt={mobileSecond.name}
@@ -100,40 +85,61 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                                     </div>
                                 </div>
                             </div>
+
                         )}
 
                     </div>
 
-                    {/* Frame48 — small tall card */}
                     {mobileTall && (
-                        <div className="relative h-[452px] w-full max-w-[655px] rounded-[10px] overflow-hidden">
-                            <Image
-                                src={mobileTall.imageSrc}
-                                alt={mobileTall.name}
-                                className="absolute inset-0 w-full h-full object-cover"
-                                fill
-                            />
-                            <div className="absolute top-0 right-0 p-[10px]">
-                                <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
-                                    <p className="font-poppins text-[22px] text-[#222]">
-                                        {mobileTall.name}
-                                    </p>
+                        <div className="flex w-full flex-col">
+                            <div className="relative w-[100vw] h-[452px] w-full rounded-[10px] overflow-hidden">
+                                <Image
+                                    src={mobileTall.imageSrc}
+                                    alt={mobileTall.name}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    fill
+                                />
+                                <div className="absolute top-0 right-0 p-[10px]">
+                                    <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
+                                        <p className="font-poppins text-[22px] text-[#222]">
+                                            {mobileTall.name}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <motion.button
+                                onClick={onSeeAll}
+                                className="bg-[#b2833a] font-poppins rounded-[10px] h-[70px] w-full flex items-center justify-center gap-[8px] text-white text-[16px] font-poppins mt-[20px]"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ delay: 0.2 + 1 * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
+                                <span>{seeAllLabel}</span>
+                                <svg width="18" height="15" fill="none">
+                                    <path
+                                        d="M17.7071 8.07107C18.0976 7.68054 18.0976 7.04738 17.7071 6.65685L11.3431 0.292893C10.9526 -0.0976309 10.3195 -0.0976309 9.92893 0.292893C9.53841 0.683418 9.53841 1.31658 9.92893 1.70711L15.5858 7.36396L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8256 10.9526 14.8256 11.3431 14.435L17.7071 8.07107ZM0 7.36396V8.36396H17V7.36396V6.36396H0V7.36396Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </motion.button>
                         </div>
                     )}
                 </div>
             </div>
 
-            {/* -----------------------------------------------------
-               DESKTOP (lg+)
-            ------------------------------------------------------ */}
             <div className="hidden lg:block">
                 {/* Title */}
                 <div className="h-[185px] flex items-center justify-center">
-                    <h2 className="font-poppins text-[34px] text-[#222] text-center">
+                    <motion.h2
+                        className="font-poppins text-[34px] text-[#222] text-center mb-10"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                        viewport={{ once: true }}
+                    >
                         {title}
-                    </h2>
+                    </motion.h2>
                 </div>
 
                 {/* Grid */}
@@ -144,12 +150,12 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                         <div className="flex flex-col gap-[13px] flex-1 min-w-[380px] max-w-[650px]">
 
                             <div className="flex gap-[13px]">
-                                {firstBrand && <BrandCard name={firstBrand.name} imageSrc={firstBrand.imageSrc} />}
-                                {secondBrand && <BrandCard name={secondBrand.name} imageSrc={secondBrand.imageSrc} />}
+                                {firstBrand && <BrandCard index={2} name={firstBrand.name} imageSrc={firstBrand.imageSrc} />}
+                                {secondBrand && <BrandCard index={2} name={secondBrand.name} imageSrc={secondBrand.imageSrc} />}
                             </div>
 
                             {smallTallBrand && (
-                                <BrandCard name={smallTallBrand.name} imageSrc={smallTallBrand.imageSrc} />
+                                <BrandCard index={1} name={smallTallBrand.name} imageSrc={smallTallBrand.imageSrc} />
                             )}
                         </div>
 
@@ -157,11 +163,17 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                         <div className="flex flex-col gap-[13px] flex-1 min-w-[380px] max-w-[650px]">
 
                             {rightTallBrand && (
-                                <div className="relative h-[828px] w-full min-w-[410px] rounded-[10px] overflow-hidden">
+                                <motion.div
+                                    className="group relative h-[828px] w-full min-w-[410px] rounded-[10px] overflow-hidden"
+                                    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    transition={{ delay: 0.2 + 1 * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                                    viewport={{ once: true, amount: 0.3 }}
+                                >
                                     <Image
                                         src={rightTallBrand.imageSrc}
                                         alt={rightTallBrand.name}
-                                        className="absolute inset-0 h-full w-full object-cover"
+                                        className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         fill
                                     />
 
@@ -172,12 +184,15 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             )}
-
-                            <button
+                            <motion.button
                                 onClick={onSeeAll}
                                 className="bg-[#b2833a] font-poppins rounded-[10px] h-[114px] w-full min-w-[410px] flex items-center justify-center gap-[8px] text-white text-[16px] font-poppins"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ delay: 0.2 + 1 * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                                viewport={{ once: true, amount: 0.3 }}
                             >
                                 <span>{seeAllLabel}</span>
                                 <svg width="18" height="15" fill="none">
@@ -186,7 +201,8 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                                         fill="white"
                                     />
                                 </svg>
-                            </button>
+                            </motion.button>
+
                         </div>
 
                     </div>

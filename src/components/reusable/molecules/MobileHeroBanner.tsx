@@ -49,7 +49,7 @@ const MobileHeroBanner: React.FC<MobileHeroBannerProps> = ({
             </div>
 
             <div className="absolute inset-0 flex items-center justify-center px-6 z-10">
-                <div className="flex flex-col gap-6 max-w-[420px]">
+                <div className="flex flex-col gap-6 max-w-[420px] items-center lg:items-start text-center lg:text-left">
                     <motion.h1
                         key={`title-${currentIndex}`}
                         initial={{ opacity: 0, x: -20 }}

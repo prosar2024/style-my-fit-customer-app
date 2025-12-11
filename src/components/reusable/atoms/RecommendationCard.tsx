@@ -24,12 +24,12 @@ function RecommendationCard({
             <div className="absolute inset-0 border border-[rgba(178,131,58,0.55)] rounded-[10px] pointer-events-none" aria-hidden="true" />
 
             {/* Frame61 Image */}
-            <div className="h-[247px] w-full rounded-[10px] shrink-0 relative overflow-hidden">
+            <div className="group h-[247px] w-full rounded-[10px] shrink-0 relative overflow-hidden">
                 <Image
                     src={imageSrc}
                     fill
                     alt=""
-                    className="w-full h-full object-cover rounded-[10px]"
+                    className="w-full h-full object-cover rounded-[10px] group-hover:scale-110 transition-transform duration-700"
                 />
             </div>
 

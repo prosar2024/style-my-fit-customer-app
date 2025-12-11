@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/reusable/molecules/Navbar";
 import ScrollToTop from "@/components/reusable/atoms/scollToTop";
 import Footer from "@/components/reusable/molecules/Footer";
-import LoaderWrapper from "@/hoc/LoaderWrapper";
+// import LoaderWrapper from "@/hoc/LoaderWrapper";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,13 +27,13 @@ export default function RootLayout({
         className={`antialiased font-poppins`}
       >
         <ScrollToTop />
-        <LoaderWrapper>
+        {/* <LoaderWrapper> */}
           <div className="min-h-screen">
             <Navbar />
-            <main className="lg:pt-[94px] pt-[65.5px]">{children}</main>
+            <main className="lg:pt-[94px] pt-[59px]">{children}</main>
             <Footer />
           </div>
-        </LoaderWrapper>
+        {/* </LoaderWrapper> */}
       </body>
     </html>
   );
