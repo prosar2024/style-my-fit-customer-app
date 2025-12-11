@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Search, Calendar, Tag, ArrowRight, TrendingUp, X } from 'lucide-react';
 import { AnimatePresence } from 'motion/react';
-import { ImageWithFallback } from '@/components/ui/atoms/ImageWithFallback';
+import { ImageWithFallback } from '@/components/reusable/atoms/ImageWithFallback';
 
 interface BlogPageProps {
   onClose?: () => void;

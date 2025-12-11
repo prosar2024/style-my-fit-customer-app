@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'motion/react';
 import { ChevronRight, Sparkles, Quote } from 'lucide-react';
-import { ImageWithFallback } from '@/components/ui/atoms/ImageWithFallback';
+import { ImageWithFallback } from '@/components/reusable/atoms/ImageWithFallback';
 import { bodyShapes, processSteps } from '@/data/bodyShape';
 
 interface BodyShapeGuideProps {

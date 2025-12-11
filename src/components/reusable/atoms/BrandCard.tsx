@@ -21,7 +21,7 @@ export const BrandCard: React.FC<BrandCardProps> = ({
         />
         <div className="relative h-full w-full overflow-hidden rounded-[10px] flex justify-end items-start p-[10px]">
             <div className={badgeClassName ?? "bg-[rgba(255,255,255,0.35)] rounded-[10px] h-[54px] flex items-center justify-center px-[20px]"}>
-                <span className="font-['Recoleta_Alt'] text-[22px] text-[#222222]">
+                <span className="font-poppins text-[22px] text-[#222222]">
                     {name}
                 </span>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandCard } from "@/components/ui/atoms/BrandCard";
+import { BrandCard } from "@/components/reusable/atoms/BrandCard";
 import Image from "next/image";
 
 interface BrandCardData {
@@ -54,7 +54,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
             <div className="block lg:hidden px-4 sm:px-6 py-12 sm:py-16">
 
                 {/* Frame55 */}
-                <h2 className="font-['Recoleta_Alt'] text-[34px] text-[#222] text-center mb-10">
+                <h2 className="font-poppins text-[34px] text-[#222] text-center mb-10">
                     {title}
                 </h2>
 
@@ -75,7 +75,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                                 />
                                 <div className="absolute top-0 right-0 p-[10px]">
                                     <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
-                                        <p className="font-['Recoleta_Alt'] text-[22px] text-[#222]">
+                                        <p className="font-poppins text-[22px] text-[#222]">
                                             {mobileFirst.name}
                                         </p>
                                     </div>
@@ -94,7 +94,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                                 />
                                 <div className="absolute top-0 right-0 p-[10px]">
                                     <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
-                                        <p className="font-['Recoleta_Alt'] text-[22px] text-[#222]">
+                                        <p className="font-poppins text-[22px] text-[#222]">
                                             {mobileSecond.name}
                                         </p>
                                     </div>
@@ -115,7 +115,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
                             />
                             <div className="absolute top-0 right-0 p-[10px]">
                                 <div className="bg-white/35 backdrop-blur-sm rounded-[10px] h-[54px] px-[20px] flex items-center justify-center">
-                                    <p className="font-['Recoleta_Alt'] text-[22px] text-[#222]">
+                                    <p className="font-poppins text-[22px] text-[#222]">
                                         {mobileTall.name}
                                     </p>
                                 </div>
@@ -167,7 +167,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
 
                                     <div className="absolute top-0 left-0 p-[10px]">
                                         <div className="bg-white/35 backdrop-blur-md rounded-[10px] h-[54px] flex items-center justify-center px-[20px]">
-                                            <span className="font-['Recoleta_Alt'] text-[22px] text-[#222]">
+                                            <span className="font-poppins text-[22px] text-[#222]">
                                                 {rightTallBrand.name}
                                             </span>
                                         </div>
@@ -177,7 +177,7 @@ export const OurBrands: React.FC<OurBrandsProps> = ({
 
                             <button
                                 onClick={onSeeAll}
-                                className="bg-[#b2833a] rounded-[10px] h-[114px] w-full min-w-[410px] flex items-center justify-center gap-[8px] text-white text-[16px] font-poppins"
+                                className="bg-[#b2833a] font-poppins rounded-[10px] h-[114px] w-full min-w-[410px] flex items-center justify-center gap-[8px] text-white text-[16px] font-poppins"
                             >
                                 <span>{seeAllLabel}</span>
                                 <svg width="18" height="15" fill="none">

@@ -5,9 +5,9 @@ import { motion } from "motion/react";
 import { X } from "lucide-react";
 import { SearchIcon, WishlistIcon } from "@/components/icons/icons";
 import { menuItems } from "@/data/menuItems";
-import LoginModal from "@/components/ui/molecules/LoginModal";
-import AnimatedSearchBox from "@/components/ui/atoms/AnimatedSearchBox";
-import MobileMenu from "@/components/ui/molecules/MobileMenu";
+import LoginModal from "@/components/reusable/molecules/LoginModal";
+import AnimatedSearchBox from "@/components/reusable/atoms/AnimatedSearchBox";
+import MobileMenu from "@/components/reusable/molecules/MobileMenu";
 import Image from "next/image";
 
 function DesktopNav({
@@ -104,7 +104,7 @@ function MobileNav({
         </motion.button>
 
         <button onClick={() => router.push("/")}>
-          <Image fill alt="StyleMyFit Logo" src="/icons/logo.svg" className="h-[35px]" />
+          <Image alt="StyleMyFit Logo" src="/icons/logo.svg" height={35} width={150} className="h-[35px]" />
         </button>
         <SearchIcon onClick={() => setShowSearchOverlay(true)} />
       </div>

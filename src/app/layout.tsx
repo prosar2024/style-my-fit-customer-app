@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/ui/molecules/Navbar";
-import ScrollToTop from "@/components/ui/atoms/scollToTop";
-import Footer from "@/components/ui/molecules/Footer";
+import Navbar from "@/components/reusable/molecules/Navbar";
+import ScrollToTop from "@/components/reusable/atoms/scollToTop";
+import Footer from "@/components/reusable/molecules/Footer";
 import LoaderWrapper from "@/hoc/LoaderWrapper";
 import "./globals.css";
 

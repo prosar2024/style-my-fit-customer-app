@@ -2,14 +2,13 @@
 import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Target, Eye, Users, Heart, Sparkles, TrendingUp, Award } from "lucide-react";
-// import SearchOverlay from "./SearchOverlay";
-// import teamImage from "figma:asset/21c45383456fb6e2fc3f69487f67369aba92194c.png";
-import LoginModal from "@/components/ui/molecules/LoginModal";
-import { ImageWithFallback } from "@/components/ui/atoms/ImageWithFallback";
+import LoginModal from "@/components/reusable/molecules/LoginModal";
+import { ImageWithFallback } from "@/components/reusable/atoms/ImageWithFallback";
+import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
     const [showLoginModal, setShowLoginModal] = useState(false);
-
+    const router = useRouter();
     const { scrollY } = useScroll();
     const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
     const heroScale = useTransform(scrollY, [0, 300], [1, 0.95]);
@@ -340,7 +339,7 @@ export default function AboutPage() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => {/* Navigate to shopping page */ }}
+                                onClick={() => { router.push("/clothing"); }}
                                 className="px-8 py-4 bg-white text-[#b2833a] rounded-full hover:shadow-xl transition-shadow"
                             >
                                 Start Shopping
@@ -349,7 +348,7 @@ export default function AboutPage() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => {/* Navigate to contact page */ }}
+                                onClick={() => { router.push("/contact"); }}
                                 className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full hover:bg-white/10 transition-colors"
                             >
                                 Get in Touch

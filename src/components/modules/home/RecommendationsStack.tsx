@@ -1,4 +1,4 @@
-import RecommendationCard from '@/components/ui/atoms/RecommendationCard';
+import RecommendationCard from '@/components/reusable/atoms/RecommendationCard';
 
  function RecommendationsGrid() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "motion/react";
-import PageLoader from "@/components/ui/atoms/PageLoader";
+import PageLoader from "@/components/reusable/atoms/PageLoader";
 
 export default function LoaderWrapper({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);

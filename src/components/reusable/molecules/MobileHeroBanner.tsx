@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import AnimatedButton from "@/components/ui/atoms/AnimatedButton";
+import AnimatedButton from "@/components/reusable/atoms/AnimatedButton";
 import Image from "next/image";
 
 interface MobileHeroBannerProps {

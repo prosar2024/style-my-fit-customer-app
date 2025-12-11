@@ -1,66 +1,13 @@
 "use client";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Ruler, Cpu, CheckCircle, Check, ChevronDown, Menu } from 'lucide-react';
-import { ImageWithFallback } from '@/components/ui/atoms/ImageWithFallback';
+import { X, Ruler, Cpu, CheckCircle, Check } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ImageWithFallback } from '@/components/reusable/atoms/ImageWithFallback';
 
-interface SolutionPageProps {
-  onClose?: () => void;
-  onGoHome?: () => void;
-  onShopClick?: () => void;
-  onWishlistClick?: () => void;
-  onAboutClick?: () => void;
-  onContactClick?: () => void;
-  onBlogClick?: () => void;
-  onBodyShapeGuideClick?: () => void;
-  wishlistCount?: number;
-}
-
-export default function SolutionPage({
-  onClose,
-  onGoHome,
-  onShopClick,
-  onWishlistClick,
-  onAboutClick,
-  onContactClick,
-  onBlogClick,
-  onBodyShapeGuideClick,
-  wishlistCount
-}: SolutionPageProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showSearchOverlay, setShowSearchOverlay] = useState(false);
+export default function SolutionPage() {
   const [activeTab, setActiveTab] = useState<'measurement' | 'database'>('measurement');
-
-  const handleMenuNavigate = (page: string) => {
-    setIsMenuOpen(false);
-    
-    switch (page) {
-      case 'home':
-        onGoHome?.();
-        break;
-      case 'shop':
-        onShopClick?.();
-        break;
-      case 'wishlist':
-        onWishlistClick?.();
-        break;
-      case 'contact':
-        onContactClick?.();
-        break;
-      case 'about':
-        onAboutClick?.();
-        break;
-      case 'blog':
-        onBlogClick?.();
-        break;
-      case 'solution':
-        // Already on this page, just close menu
-        break;
-      case 'body-shape-guide':
-        onBodyShapeGuideClick?.();
-        break;
-    }
-  };
+  const router = useRouter();
 
   const steps = [
     {
@@ -95,22 +42,12 @@ export default function SolutionPage({
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="inset-0 z-[9998] bg-[#fafaf8] overflow-y-auto"
     >
-
-      {/* Animated Search Overlay */}
-      {/* <AnimatePresence>
-        {showSearchOverlay && (
-          <AnimatedSearchBox 
-            onClose={() => setShowSearchOverlay(false)}
-          />
-        )}
-      </AnimatePresence> */}
-
       {/* Main Content */}
       <div className="min-h-screen">
         {/* Hero Introduction Section */}
@@ -188,7 +125,7 @@ export default function SolutionPage({
               >
                 <div className="relative rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(178,131,58,0.3)]">
                   <ImageWithFallback
-                    src={""}
+                    src={"/images/solutions/hero-image.png"}
                     alt="Fashion Technology"
                     className="w-full h-[300px] sm:h-[400px] object-cover"
                   />
@@ -218,7 +155,7 @@ export default function SolutionPage({
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-[#222222] mb-4 font-['Playfair_Display:600',serif]">
+            <h2 className="text-[#222222] mb-4 font-poppins font-semibold text-[28px] sm:text-[32px]">
               How It Works
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#b2833a] to-[#D38436] mx-auto rounded-full" />
@@ -237,7 +174,7 @@ export default function SolutionPage({
                 <div className="bg-white rounded-[20px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(178,131,58,0.15)] transition-all duration-500 h-full">
                   {/* Step Number */}
                   <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-[#b2833a] to-[#D38436] rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white font-['Poppins:Bold',sans-serif] text-[20px]">
+                    <span className="text-white font-poppins font-bold text-[20px]">
                       {step.number}
                     </span>
                   </div>
@@ -250,10 +187,10 @@ export default function SolutionPage({
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-[#222222] text-[20px] sm:text-[22px] mb-3 font-['Poppins:SemiBold',sans-serif] text-center">
+                  <h3 className="text-[#222222] text-[20px] sm:text-[22px] mb-3 font-poppins font-semibold text-center">
                     {step.title}
                   </h3>
-                  <p className="text-[#666666] font-['Poppins:Regular',sans-serif] text-[15px] leading-relaxed text-center">
+                  <p className="text-[#666666] font-poppins text-[15px] leading-relaxed text-center">
                     {step.description}
                   </p>
                 </div>
@@ -266,7 +203,7 @@ export default function SolutionPage({
                       transition={{ duration: 2, repeat: Infinity }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#b2833a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#b2833a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </motion.div>
                   </div>
@@ -286,7 +223,7 @@ export default function SolutionPage({
               transition={{ duration: 0.8 }}
               className="text-center mb-12 sm:mb-16"
             >
-              <h2 className="text-[#222222] mb-4 font-['Playfair_Display:600',serif]">
+              <h2 className="text-[#222222] mb-4 font-poppins font-semibold text-[28px] sm:text-[32px]">
                 Key Features
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#b2833a] to-[#D38436] mx-auto rounded-full" />
@@ -314,7 +251,7 @@ export default function SolutionPage({
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#b2833a] to-[#D38436] rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                         <Check className="w-5 h-5 text-white" strokeWidth={3} />
                       </div>
-                      <p className="text-[#222222] font-['Poppins:Medium',sans-serif] text-[16px] leading-relaxed pt-1">
+                      <p className="text-[#222222] font-poppins font-medium text-[16px] leading-relaxed pt-1">
                         {feature}
                       </p>
                     </motion.div>
@@ -341,7 +278,7 @@ export default function SolutionPage({
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#b2833a] to-[#D38436] rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                         <Check className="w-5 h-5 text-white" strokeWidth={3} />
                       </div>
-                      <p className="text-[#222222] font-['Poppins:Medium',sans-serif] text-[16px] leading-relaxed pt-1">
+                      <p className="text-[#222222] font-poppins font-medium text-[16px] leading-relaxed pt-1">
                         {feature}
                       </p>
                     </motion.div>
@@ -361,7 +298,7 @@ export default function SolutionPage({
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-[#222222] mb-4 font-['Playfair_Display:600',serif]">
+            <h2 className="text-[#222222] mb-4 font-poppins font-semibold text-[28px] sm:text-[32px]">
               The Technology
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#b2833a] to-[#D38436] mx-auto rounded-full" />
@@ -372,11 +309,10 @@ export default function SolutionPage({
             <div className="flex gap-4 mb-8 border-b border-[#e5e5e5]">
               <button
                 onClick={() => setActiveTab('measurement')}
-                className={`relative px-6 py-4 font-['Poppins:SemiBold',sans-serif] text-[16px] transition-all ${
-                  activeTab === 'measurement'
-                    ? 'text-[#b2833a]'
-                    : 'text-[#666666] hover:text-[#222222]'
-                }`}
+                className={`relative px-6 py-4 font-poppins font-semibold text-[16px] transition-all ${activeTab === 'measurement'
+                  ? 'text-[#b2833a]'
+                  : 'text-[#666666] hover:text-[#222222]'
+                  }`}
               >
                 Measurement Analysis
                 {activeTab === 'measurement' && (
@@ -391,11 +327,10 @@ export default function SolutionPage({
 
               <button
                 onClick={() => setActiveTab('database')}
-                className={`relative px-6 py-4 font-['Poppins:SemiBold',sans-serif] text-[16px] transition-all ${
-                  activeTab === 'database'
-                    ? 'text-[#b2833a]'
-                    : 'text-[#666666] hover:text-[#222222]'
-                }`}
+                className={`relative px-6 py-4 font-poppins font-semibold text-[16px] transition-all ${activeTab === 'database'
+                  ? 'text-[#b2833a]'
+                  : 'text-[#666666] hover:text-[#222222]'
+                  }`}
               >
                 Clothing Database
                 {activeTab === 'database' && (
@@ -425,10 +360,10 @@ export default function SolutionPage({
                       <Ruler className="w-8 h-8 text-[#b2833a]" />
                     </div>
                     <div>
-                      <h3 className="text-[#222222] text-[22px] mb-4 font-['Poppins:SemiBold',sans-serif]">
+                      <h3 className="text-[#222222] text-[22px] mb-4 font-poppins font-semibold">
                         Measurement Analysis
                       </h3>
-                      <p className="text-[#666666] font-['Poppins:Regular',sans-serif] text-[16px] leading-relaxed">
+                      <p className="text-[#666666] font-poppins text-[16px] leading-relaxed">
                         We analyze key measurements including chest, waist, hips, and height to determine your body shape category. Our advanced algorithms use precise anthropometric data to ensure accurate body shape classification, providing you with the most reliable foundation for perfect fit recommendations.
                       </p>
                     </div>
@@ -450,10 +385,10 @@ export default function SolutionPage({
                       <Cpu className="w-8 h-8 text-[#b2833a]" />
                     </div>
                     <div>
-                      <h3 className="text-[#222222] text-[22px] mb-4 font-['Poppins:SemiBold',sans-serif]">
+                      <h3 className="text-[#222222] text-[22px] mb-4 font-poppins font-semibold">
                         Clothing Database
                       </h3>
-                      <p className="text-[#666666] font-['Poppins:Regular',sans-serif] text-[16px] leading-relaxed">
+                      <p className="text-[#666666] font-poppins text-[16px] leading-relaxed">
                         Our extensive database contains detailed measurements for thousands of clothing items from popular brands, allowing for precise matching with your body shape. We continuously update our database with new styles and brands to ensure you always have access to the latest fashion that fits perfectly.
                       </p>
                     </div>
@@ -473,15 +408,15 @@ export default function SolutionPage({
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-white mb-6 font-['Playfair_Display:600',serif]">
+              <h2 className="text-white mb-6 font-poppins font-semibold text-[28px] sm:text-[32px]">
                 Ready to Find Your Perfect Fit?
               </h2>
-              <p className="text-white/90 font-['Poppins:Regular',sans-serif] text-[16px] sm:text-[18px] leading-relaxed mb-8">
+              <p className="text-white/90 font-poppins text-[16px] sm:text-[18px] leading-relaxed mb-8">
                 Experience the future of online shopping with StyleMyFit&apos;s personalized recommendations.
               </p>
               <motion.button
-                onClick={onShopClick}
-                className="px-8 py-4 bg-white text-[#b2833a] rounded-full font-['Poppins:SemiBold',sans-serif] text-[16px] shadow-lg hover:shadow-xl transition-all"
+                onClick={() => router.push('/clothing')}
+                className="px-8 py-4 bg-white text-[#b2833a] rounded-full font-poppins font-semibold text-[16px] shadow-lg hover:shadow-xl transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

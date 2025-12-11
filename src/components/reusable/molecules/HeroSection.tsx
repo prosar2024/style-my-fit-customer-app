@@ -1,7 +1,7 @@
 import React from "react";
-import BannerCarousel from "@/components/ui/molecules/BannerCarousal";
-import MobileHeroBanner from "@/components/ui/molecules/MobileHeroBanner";
-import AnimatedButton from "@/components/ui/atoms/AnimatedButton";
+import BannerCarousel from "@/components/reusable/molecules/BannerCarousal";
+import MobileHeroBanner from "@/components/reusable/molecules/MobileHeroBanner";
+import AnimatedButton from "@/components/reusable/atoms/AnimatedButton";
 
 interface HeroSectionProps {
     buttonClick?: () => void;
