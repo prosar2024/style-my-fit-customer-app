@@ -1,12 +1,12 @@
 "use client";
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import { useRouter } from 'next/navigation';
+import { SlidersHorizontal } from 'lucide-react';
 import { products } from '@/data/products';
 import ProductCard from '@/components/reusable/atoms/ProductCard';
 import FilterSidebar from '@/components/modules/shop/FilterSidebar';
 import { useFilters } from '@/hooks/use-filters';
-import { useRouter } from 'next/navigation';
-import { SlidersHorizontal } from 'lucide-react';
 
 export default function ShopPage() {
     const { filters, updateFilters, resetFilters, filteredProducts } = useFilters("");
@@ -19,51 +19,60 @@ export default function ShopPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="inset-0 bg-white overflow-y-auto shop-open"
+            className=" inset-0 bg-white overflow-y-auto"
         >
-            {/* Hero Section */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-[#faf9f7] via-white to-[#faf9f7] py-12 lg:py-15">
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
-                        <div className="flex items-center justify-center lg:justify-start gap-2 mb-6 text-sm">
-                            <button
-                                onClick={() => router.push("/")}
-                                className="text-gray-600 hover:text-[#b2833a] transition-all duration-300 hover:scale-105 flex items-center gap-1 font-medium"
+            {/* Breadcrumb & Title Section */}
+            <div className="relative overflow-hidden bg-gradient-to-br from-[#faf9f7] via-white to-[#faf9f7]">
+                <div className="absolute inset-0 opacity-[0.03]">
+                    <div className="absolute top-10 right-20 w-64 h-64 bg-[#b2833a] rounded-full blur-3xl" />
+                    <div className="absolute bottom-10 left-20 w-80 h-80 bg-[#d38436] rounded-full blur-3xl" />
+                </div>
+                <div className="relative max-w-[1440px] mx-auto px-6 lg:px-16 py-12 lg:py-16">
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}>
+                        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                            <motion.span
+                                className="text-sm text-[#888] hover:text-[#b2833a] cursor-pointer transition-all duration-300 hover:scale-105"
+                                onClick={() => router.push('/')}
+                                whileHover={{ x: -2 }}
                             >
                                 Home
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-gray-400">
-                                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                            <span className="text-gray-900 font-semibold">Clothing</span>
-                        </div>
-                        <h1 className="font-[Playfair_Display] text-4xl lg:text-5xl font-medium text-gray mb-6 leading-tight">
-                            Curated Collection
-                        </h1>
-                        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            Discover our premium pieces, tailored to enhance your unique style and body shape.
-                        </p>
-                        <div className="flex flex-wrap gap-6 text-sm justify-center lg:justify-start text-gray-600">
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-[#b2833a] rounded-full animate-pulse" />
-                                {/* <span className="font-medium">{filteredProducts.length} Available</span> */}
-                                <span className="font-medium">No products available.</span>
+                            </motion.span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-[#ccc]">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            <span className="text-sm text-[#222]">Clothing</span>
+                        </motion.div>
+                        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                                <motion.h1 className="font-['Recoleta_Alt:Bold',sans-serif] text-[#222222] mb-3 text-4xl lg:text-5xl text-center lg:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+                                    Curated Collection
+                                </motion.h1>
+                                <motion.p className="text-base text-[#666] max-w-2xl text-center lg:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+                                    Discover our premium pieces, tailored to enhance your unique style and body shape.
+                                </motion.p>
+                                <div className="flex mt-6 flex-wrap gap-6 text-sm justify-center lg:justify-start text-gray-600">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-2 h-2 bg-[#b2833a] rounded-full animate-pulse" />
+                                        {/* <span className="font-medium">{filteredProducts.length} Available</span> */}
+                                        <span className="font-medium">No products available.</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#b2833a]">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        <span className="font-medium">Personalized Fit</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#b2833a]">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                    <circle cx="12" cy="7" r="4" />
-                                </svg>
-                                <span className="font-medium">Personalized Fit</span>
-                            </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </section>
+            </div>
 
             {/* Main Content - No navbar padding */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-10">
-                <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,320px)_1fr] xl:grid-cols-[minmax(0,350px)_1fr] gap-8 lg:gap-12">
+            <div className="max-w-[1440px] mx-auto px-6 lg:px-16 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
 
                     {/* Filters */}
                     <FilterSidebar
@@ -121,7 +130,7 @@ export default function ShopPage() {
                         )}
                     </div>
                 </div>
-            </main>
+            </div>
         </motion.div>
     );
 }
