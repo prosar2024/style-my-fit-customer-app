@@ -14,7 +14,7 @@ jobs:
       - name: Cleanup Containers
         run: |
             CONTAINER_NAME=style-my-fit-fe-customer
-            docker ps -q -f name="^${CONTAINER_NAME}$" | xargs -r docker kill
+            docker ps -q -f name="^${CONTAINER_NAME}$" | xargs -r docker stop
             docker ps -aq -f name="^${CONTAINER_NAME}$" | xargs -r docker rm
 
       - name: Build Docker image
